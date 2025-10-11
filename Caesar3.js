@@ -15,4 +15,6 @@ const randomInte = Math.floor(randomMultiple)
 //answer key used for this step
 const shiftValue = randomInte + 3;
 
+console.log(shiftValue)
+
 // Question4: We add 3 to the random integer to shift the range from 0-30 to 3-33, ensuring our final shift value falls within the desired range of 3 to 33.
