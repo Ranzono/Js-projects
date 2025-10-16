@@ -45,4 +45,6 @@ switch (emblemClue3)
         break;          
 }
 console.log(localOne + ' ' + localTwo + ' to the ' + localThree)
-// it is important to use == over === as the first option only checks if the values is the same, while the second checks if value and type are the same. Which when numbers are involved cane betriky if you are working with both the "number" type and the "text" type as you will need to ensure those types are specified.
+// it is important to use == over === as the first option only checks if the values is the same, 
+// while the second checks if value and type are the same. Which when numbers are involved can be tricky if you are working
+//  with both the "number" type and the "text" type as you will need to ensure those types are specified.
