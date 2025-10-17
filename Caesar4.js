@@ -1,5 +1,5 @@
-const emblemClue1 = "Eagle";
-const emblemClue2 = "Laurel";
+const emblemClue1 = "Lion";
+const emblemClue2 = "Grapes";
 const emblemClue3 = 7;
 let localOne = "null"
 let localTwo = "null"
