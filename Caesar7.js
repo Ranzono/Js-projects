@@ -4,9 +4,13 @@ let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 for( let i = 0; i < friend.length; i++ ){
     let letter = friend[i]
+    // this attaches a variable to the selected letter of friend
     let index = alphabet.indexOf(letter);
+    //grabs the correspoding letter of the alphabet's value
     let newIndex = (index + shiftValue) % alphabet.length;
+    // shifts the value of the letter and gives it a new variable
     let encyptedLetter = alphabet[newIndex];
+    //takes our new value and grabs the relevant letter
     console.log(encyptedLetter)
 }
 
