@@ -1,5 +1,5 @@
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
-let al = alphabet.length
+let alphLength = alphabet.length
 function encrypt (message, shiftValue)
 {
      let encryptedMessage = []
@@ -9,7 +9,7 @@ function encrypt (message, shiftValue)
     // some setup
     let index = alphabet.indexOf(k.toLowerCase())
     //numeric value of letter
-    let encryptedLetter = alphabet[(index + shiftValue + al ) % al];
+    let encryptedLetter = alphabet[(index + shiftValue + alphLength ) % alphLength];
     //encrypts letter
     if (index === -1){
         encryptedMessage.push(k)
@@ -41,8 +41,9 @@ function decrypt (encryptedMessage, shiftValue)
     }
     //pushes non letter character
     else{
-        let dl = alphabet[(index - shiftValue + al ) % al];
-        decryptedMessage.push(dl)
+        let decryptedLetter = alphabet[((index - shiftValue + alphLength ) % alphLength + alphLength) % alphLength]
+        //allows for negative value wrapping
+        decryptedMessage.push(decryptedLetter)
     }
     //decrypts
   }
@@ -53,3 +54,8 @@ function decrypt (encryptedMessage, shiftValue)
 //console.log(encrypt('ababababab',1))
 //console.log(encrypt("garden",4))
 console.log(decrypt("Iueuan jrxuq cjythdykwxaj mixkqtaeml ebv wHenckvbkei rqdmt fHukckvi.r Jbxuihus, tmxayiwfuxh sjxau amenhtv 'zQkhhuubyjkit' yjew jhxux mxydatij. zJxmu hvymhihj ajel kldlsuyjb dyju yid uekdh qIbkqsxa xsxqqdvduzb wuqzhdoi qjxwu waueo xjem jfxuy dpuntj dgkvuiwj.",42))
+//console.log(decrypt('aab3',1))
+//console.log(decrypt('keovhoirs',4))
+// decrypt('aab3',1)
+// console.log(decrypt("Iueuan ",42))
+//decrypt("Iueuan ",42)
