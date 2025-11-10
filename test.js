@@ -1,18 +1,23 @@
-let nums = [5, 67, 7, 82]
+const words = ['zombies', 'losers', 'zoo', 'frogs', 'foxes', 'zed', 'pork'] 
 
-
-
-function myMap(arr, callback){
-    const mappedArray = [];
-    for ( let i = 0; i < arr.length; i++){
-      const val = callback(arr[i], i, arr);
-       mappedArray.push(val) 
-    }
-    return mappedArray
+function myFilter(arr, callback,inputLetter){
+    const filteredArray = [];
+for(let i = 0; i < arr.length; i++){
+if (callback(arr[i],)){
+    filteredArray.push(arr[i])
+}
+}
+    return filteredArray
 }
 
-const preNum = myMap(nums, function(num){
-    return num * -1;
-});
+function zFilter(inputWord,inputLetter){
+    for (let j = 0; j < inputWord.length; j++){
+        if (inputWord.indexOf(inputLetter) === -1)
+        return false;
+    else {
+        return true;
+    }
+    }
+}
 
-console.log(preNum)
+console.log(myFilter(words, zFilter,'z'))

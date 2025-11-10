@@ -42,7 +42,8 @@ function runOneTimeTasks ()
 // Task 4: Start Monitoring Function
 function startMonitoring ()
 {
-	setInterval(mon, 3000)// TODO: Write a function named `startMonitoring` that uses `setInterval` to simulate continuous monitoring. This function should print a message every few seconds and store the interval ID in `monitoringTaskId`.
+	setInterval(mon, 3000)
+	// TODO: Write a function named `startMonitoring` that uses `setInterval` to simulate continuous monitoring. This function should print a message every few seconds and store the interval ID in `monitoringTaskId`.
 }
 
 // Task 5: Stop Monitoring Function
@@ -85,4 +86,4 @@ scheduleMission(); // Starts the mission.
 // addOneTimeTask(temp, 2000)
 // startMonitoring ()
 // runOneTimeTasks()
-// stopMonitoring()
+// stopMonitoring()h

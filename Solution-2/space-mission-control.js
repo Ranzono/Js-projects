@@ -78,3 +78,4 @@ function scheduleMission ()
 }
 
 scheduleMission(); // Starts the mission.
+//
