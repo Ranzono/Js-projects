@@ -1,23 +1,22 @@
-const words = ['zombies', 'losers', 'zoo', 'frogs', 'foxes', 'zed', 'pork'] 
-
-function myFilter(arr, callback,inputLetter){
-    const filteredArray = [];
-for(let i = 0; i < arr.length; i++){
-if (callback(arr[i],)){
-    filteredArray.push(arr[i])
-}
-}
-    return filteredArray
-}
-
-function zFilter(inputWord,inputLetter){
-    for (let j = 0; j < inputWord.length; j++){
-        if (inputWord.indexOf(inputLetter) === -1)
-        return false;
-    else {
-        return true;
+const scores = [0,0,0,8,24,35,45,68,74,81,96,100]
+function myFind(arr, callback){
+    for ( let i =0; i < arr.length; i++ ){
+       if (callback(arr[i],i,arr) === true)
+        return arr[i]
     }
-    }
-}
+};
+//  console.log(myFind(scores,function(score){
+// return score > ;
+// }));
 
-console.log(myFilter(words, zFilter,'z'))
+function myFindIndex(arr, callback){
+    for ( let i =0; i < arr.length; i++ ){
+       if (callback(arr[i],i,arr) === true)
+        return i;
+    }
+    return -1
+};
+
+console.log( myFindIndex(scores, function(score){
+    return score > 40;
+}));
